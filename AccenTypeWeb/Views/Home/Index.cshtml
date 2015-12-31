@@ -1,0 +1,68 @@
+﻿@using UnaccenType.Controllers
+@using UnaccenType.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccenType</title>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:300' rel='stylesheet' type='text/css'>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    @Html.AntiForgeryToken()
+
+    <div style="text-align:center; margin:40px;">
+        <h1>AccenType</h1>
+        <span id="betabadge"><a href="#">@HomeController.Version</a></span>
+        <div>Predictive accentless typing for Latin-based languages <a href="https://www.youtube.com/watch?v=uXn8IRaKUm4">(what is it?)</a></div>
+    </div>
+    <div class="ut-text-container">
+        <span id="spError" class="label label-danger" style="display:none; font-size:16px;">Error message here</span>
+    </div>
+    <div class="ut-text-container">
+        <textarea class="form-control" id="txtQuery" spellcheck="false" style="width:500px; height:200px; display:inline-block;"></textarea>
+    </div>
+    <div class="ut-text-container" style="height:40px;">
+        <span id="icoArrow" class="glyphicon glyphicon-arrow-down" style="font-size:24px;"></span>
+        <img id="icoThinking" src="~/images/thinking.gif" style="display:none;" />
+    </div>
+    <div class="ut-text-container">
+        <div class="btn-group">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span id="spLanguage">@HomeController.DefaultLanguage</span> &nbsp;
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" style="text-align:left;">
+                    @foreach (var item in Enum.GetNames(typeof(Language)))
+                    {
+                        <li><a class="aLanguageChoice" href="#">@item.ToString()</a></li>
+                    }
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="ut-text-container">
+        <div id="divPredict" class="ut-text-container-predict"></div>
+    </div>
+    <div id="divChoices" class="ut-text-choices-container">
+    </div>
+    <div class="ut-text-container">
+        <button id="btnCopy" class="btn btn-primary">Copy</button>
+    </div>
+    <div class="ut-text-container">
+        <span id="spCopyResult" class="text-success" style="opacity:0.0;">Copied to Clipboard</span>
+    </div>
+    <div class="ut-text-container">
+        <span class="text-muted">Ctrl + Enter if nothing shows up</span>
+    </div>
+    @Scripts.Render("~/bundles/site")
+</body>
+</html>

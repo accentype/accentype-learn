@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="AccenTypeCloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="PredictRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="lhoang" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEE5IBqe3bE+UR1pTafzVXzYwDQYJKoZIhvcNAQEBBQAEggEAGFKqZmISGl/5yCb5RgMjEt+iV0kPNlAv6TRQRjxtjdqxpukA4TwiNRFVYEsgd2XBD9lhm5uGDlBdXW5vt9UnDmk/3aJ8evUdf3xQX7HZz87h2WhH0UVwX2DJFpDLWlF13UV8Q/yuSrTikNmrgvimzSkkVe53EuRMr0S+j9LXz9scEt+Aad8NW7ANb7tI8/P/bEUlpKTnF69kLbP0HZCDy/cu0Ue+W7fQuHdrCtBf8VvKSSVjkSQj5q2XGkIXT9xkT2qidZ++qkeAhPoAbeDmcZq/UQ8PjhZnxakGptK/rI4xw2oAsQ5lScvldHouKJFg9ziwfHhXO14yXqWM/3/KrzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECGJ364OsxrbxgBAV3jv10cc93CAO1nWASeb6" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-04-03T23:59:59.0000000-04:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="B6C4ECF0AA97B5BCBC422E3AEFD9272A5E584831" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

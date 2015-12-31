@@ -1,0 +1,13 @@
+**/bin
+**/obj
+**/csx
+**/rcf
+packages
+data
+model
+*.suo
+*.log
+*.user
+*.debug.config
+*.release.config
+*.at
