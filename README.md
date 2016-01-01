@@ -10,7 +10,7 @@ AccenType is trained and tested on a dataset collected from webpages consisting 
 
 **Using the service**
 
-The backend prediction cloud service runs on Microsoft Azure platform and uses UDP sockets for low-latency data exchange. External queries can be made against this service to retrieve predictions. For sample code on how this is done, see [C# sample](https://github.com/accentype/accentype-learn/blob/master/AccenTypeConsole/UDPTest.cs#L15) or [Java sample](https://github.com/accentype/accentype-android/blob/master/app%2Fsrc%2Fmain%2Fjava%2Fcom%2Faccentype%2Fandroid%2Fsoftkeyboard%2FSoftKeyboard.java#L1127). **Note**: due to limited resources, the service only supports predictions in Vietnamese at the moment. However, the infrastructure is entirely compatible with any choice of language. If you would like to try this service in another language, please contact us.
+The backend prediction cloud service runs on Microsoft Azure platform and uses UDP sockets for low-latency data exchange. External queries can be made against this service to retrieve predictions. For sample code on how this is done, see [C# sample](https://github.com/accentype/accentype-learn/blob/master/AccenTypeConsole/UDPTest.cs#L15) or [Java sample](https://github.com/accentype/accentype-android/blob/master/app%2Fsrc%2Fmain%2Fjava%2Fcom%2Faccentype%2Fandroid%2Fsoftkeyboard%2FSoftKeyboard.java#L1127). **Note**: due to limited resources, the service only supports predictions in Vietnamese at the moment. However, the infrastructure is entirely compatible with any choice of localization. If you would like to try this service in another language, please contact us.
 
 **License**
 
